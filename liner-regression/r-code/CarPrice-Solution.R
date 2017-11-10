@@ -1,7 +1,7 @@
 
 #-----------------------Multiple Linear regression-----------------------------------------
 
-carprice <- read.csv("Carprice_Assignment.csv",stringsAsFactors = F)
+carprice <- read.csv("CarPrice_challenge.csv",stringsAsFactors = F)
 str(carprice)
 
 # Identify factor variables
@@ -154,6 +154,10 @@ summary(model_1)
 #-------------------------------------------------------------------------------------------
 
 # Apply the stepwise approach
+#install.packages("MASS")
+library(MASS)
+library(car)
+
 
 step <- stepAIC(model_1, direction="both")
 
